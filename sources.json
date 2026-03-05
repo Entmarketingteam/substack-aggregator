@@ -1,0 +1,22 @@
+[
+  {
+    "id": "arbitrage-andy",
+    "name": "ARB Letter",
+    "author": "Arbitrage Andy",
+    "base_url": "https://arbletter.arbitrageandy.us",
+    "rss_url": "https://arbletter.arbitrageandy.us/feed",
+    "substack_handle": "arbitrageandy",
+    "tags": ["markets", "crypto", "geopolitics", "investing"],
+    "active": true
+  },
+  {
+    "id": "dtc-prophet",
+    "name": "DTC Prophet",
+    "author": "DTC Prophet",
+    "base_url": "https://www.dtcprophet.com",
+    "rss_url": "https://www.dtcprophet.com/feed",
+    "substack_handle": "dtcprophet",
+    "tags": ["ecommerce", "meta-ads", "dtc", "marketing"],
+    "active": true
+  }
+]

@@ -1,0 +1,2 @@
+psycopg2-binary>=2.9
+# No external deps needed beyond stdlib — uses urllib, xml.etree, http.cookiejar
