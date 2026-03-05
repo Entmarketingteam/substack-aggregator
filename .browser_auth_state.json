@@ -1,0 +1,32 @@
+{
+  "cookies": [
+    {
+      "name": "substack.sid",
+      "value": "s:EjegAZWXdWgXKIMQerMj0lTchvYin4pS.1IIGTvyEH7ZEt5rkz0DtIG7Qbrm6e10wMdLH5yJkMwo",
+      "domain": ".substack.com",
+      "path": "/",
+      "secure": true,
+      "httpOnly": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "substack.sid",
+      "value": "s:EjegAZWXdWgXKIMQerMj0lTchvYin4pS.1IIGTvyEH7ZEt5rkz0DtIG7Qbrm6e10wMdLH5yJkMwo",
+      "domain": ".dtcprophet.com",
+      "path": "/",
+      "secure": true,
+      "httpOnly": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "substack.sid",
+      "value": "s:EjegAZWXdWgXKIMQerMj0lTchvYin4pS.1IIGTvyEH7ZEt5rkz0DtIG7Qbrm6e10wMdLH5yJkMwo",
+      "domain": ".arbletter.arbitrageandy.us",
+      "path": "/",
+      "secure": true,
+      "httpOnly": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": []
+}
