@@ -5,7 +5,7 @@
   },
   "deploy": {
     "cronSchedule": "0 * * * *",
-    "startCommand": "python ingest.py --fetch-paid",
+    "startCommand": "python ingest.py",
     "restartPolicyType": "ON_FAILURE",
     "restartPolicyMaxRetries": 3
   }
