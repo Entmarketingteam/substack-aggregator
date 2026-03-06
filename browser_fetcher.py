@@ -154,6 +154,30 @@ def fetch_post_content_browser(url: str, headless: bool = True) -> dict | None:
             browser.close()
 
 
+def manual_login_and_save_state() -> bool:
+    """Open a visible browser, wait for user to log in manually, then save auth state."""
+    from playwright.sync_api import sync_playwright
+
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=False)
+        context = browser.new_context(
+            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/122",
+            viewport={"width": 1280, "height": 800},
+        )
+        page = context.new_page()
+        page.goto("https://substack.com/sign-in", wait_until="domcontentloaded")
+
+        print("
+>>> Browser is open. Log in to your Substack account.")
+        print(">>> Press ENTER here once you are fully logged in...", flush=True)
+        input()
+
+        context.storage_state(path=str(AUTH_STATE_FILE))
+        logger.info(f"Auth state saved to {AUTH_STATE_FILE}")
+        browser.close()
+        return True
+
+
 def fetch_all_paid_posts(sources: list, db, headless: bool = True):
     from playwright.sync_api import sync_playwright
     from substack_client import html_to_markdown
@@ -224,6 +248,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--login", action="store_true", help="Log in and save browser auth state")
+    parser.add_argument("--manual-login", action="store_true", help="Open browser for manual login, then save auth state")
     parser.add_argument("--fetch-paid", action="store_true", help="Fetch all unfetched paid posts")
     parser.add_argument("--test-url", help="Test fetch a single URL")
     parser.add_argument("--no-headless", action="store_true", help="Show browser window")
@@ -233,7 +258,11 @@ if __name__ == "__main__":
     email = os.environ.get("SUBSTACK_EMAIL", "")
     password = os.environ.get("SUBSTACK_PASSWORD", "")
 
-    if args.login:
+    if args.manual_login:
+        ok = manual_login_and_save_state()
+        print("Auth state saved!" if ok else "Failed")
+
+    elif args.login:
         ok = login_and_save_state(email, password, headless=headless)
         print("Login:", "OK — auth state saved" if ok else "FAILED — check login_debug.png")
 
