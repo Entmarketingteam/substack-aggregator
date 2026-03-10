@@ -159,16 +159,18 @@ def manual_login_and_save_state() -> bool:
     from playwright.sync_api import sync_playwright
 
     with sync_playwright() as p:
-        browser = p.chromium.launch(headless=False)
+        browser = p.chromium.launch(
+            headless=False,
+            channel="chrome",
+            args=["--disable-blink-features=AutomationControlled"],
+        )
         context = browser.new_context(
-            user_agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/122",
             viewport={"width": 1280, "height": 800},
         )
         page = context.new_page()
         page.goto("https://substack.com/sign-in", wait_until="domcontentloaded")
 
-        print("
->>> Browser is open. Log in to your Substack account.")
+        print(">>> Browser is open. Log in to your Substack account.")
         print(">>> Press ENTER here once you are fully logged in...", flush=True)
         input()
 
