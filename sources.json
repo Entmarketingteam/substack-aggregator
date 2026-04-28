@@ -18,5 +18,55 @@
     "substack_handle": "dtcprophet",
     "tags": ["ecommerce", "meta-ads", "dtc", "marketing"],
     "active": true
+  },
+  {
+    "id": "marlin-capital",
+    "name": "Marlin Capital",
+    "author": "David Marlin",
+    "base_url": "https://marlincapital.substack.com",
+    "rss_url": "https://marlincapital.substack.com/feed",
+    "substack_handle": "marlincapital",
+    "tags": ["investing", "swing-trading", "technical-analysis", "portfolio"],
+    "active": true
+  },
+  {
+    "id": "10x-disruptive-stocks",
+    "name": "10x Disruptive Stocks",
+    "author": "Futurist",
+    "base_url": "https://10xdisruptivestocks.substack.com",
+    "rss_url": "https://10xdisruptivestocks.substack.com/feed",
+    "substack_handle": "10xdisruptivestocks",
+    "tags": ["investing", "small-cap", "micro-cap", "disruptive", "photonics", "space", "defense", "neo-cloud"],
+    "active": true
+  },
+  {
+    "id": "outlier-capital",
+    "name": "Outlier Capital",
+    "author": "Matt Scott",
+    "base_url": "https://outliercapitalresearch.substack.com",
+    "rss_url": "https://outliercapitalresearch.substack.com/feed",
+    "substack_handle": "outliercapitalresearch",
+    "tags": ["investing", "long-short", "contrarian", "macro", "defense"],
+    "active": true
+  },
+  {
+    "id": "bowtied-broke",
+    "name": "BowTied Broke (RE)",
+    "author": "BowTied Broke",
+    "base_url": "https://bowtiedbroke.substack.com",
+    "rss_url": "https://bowtiedbroke.substack.com/feed",
+    "substack_handle": "bowtiedbroke",
+    "tags": ["real-estate", "house-flips", "str", "investing"],
+    "active": true
+  },
+  {
+    "id": "openclaw-unboxed",
+    "name": "OpenClaw Unboxed",
+    "author": "OpenClaw",
+    "base_url": "https://openclawunboxed.com",
+    "rss_url": "https://openclawunboxed.com/feed",
+    "substack_handle": "openclawunboxed",
+    "tags": ["ai-agents", "automation", "operator-strategy"],
+    "active": true
   }
 ]
